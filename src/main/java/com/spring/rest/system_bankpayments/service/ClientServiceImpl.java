@@ -24,7 +24,7 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public DepositAccount getDepositAccount(int id) {
+    public DepositAccount getDepositAccount(long id) {
         return null;
     }
 
@@ -34,7 +34,12 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public DepositAccount wireTransfer(int id, int amount) {
+    public DepositAccount wireTransfer(long id, double amount) {
         return null;
+    }
+
+    @Override
+    public void deleteDepositAccount(long id) {
+        depositAccountRepository.deleteById(id);
     }
 }

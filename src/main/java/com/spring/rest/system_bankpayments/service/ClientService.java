@@ -7,9 +7,11 @@ public interface ClientService {
 
     public List<DepositAccount> getAllInformation();
 
-    public DepositAccount getDepositAccount(int id);
+    public DepositAccount getDepositAccount(long id);
 
     public DepositAccount openAnDepositAccount(DepositAccount depositAccount);
 
-    public DepositAccount wireTransfer(int id, int amount);
+    public DepositAccount wireTransfer(long id, double amount);
+
+    public void deleteDepositAccount(long id);
 }

@@ -1,15 +1,19 @@
 package com.spring.rest.system_bankpayments.entity.role;
 
 import com.spring.rest.system_bankpayments.entity.account.DepositAccount;
-import lombok.Data;
+import lombok.*;
+
 import javax.persistence.*;
 
 @Entity
-@Data
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Client {
 
     @Id
-    private int id_client;
+    private long id_client;
 
     private String firstName;
 

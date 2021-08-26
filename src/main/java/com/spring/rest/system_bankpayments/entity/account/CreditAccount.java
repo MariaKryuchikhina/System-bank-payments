@@ -1,16 +1,19 @@
 package com.spring.rest.system_bankpayments.entity.account;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-@Data
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class CreditAccount {
 
     @Id
-    private int id_credit;
+    private long id_credit;
 
     private String number_credit; //номер кредита
 
