@@ -10,12 +10,12 @@ public class DepositAccount {
     @Id
     private int id_deposit;
 
-    private String number_deposit;
+    private String number_deposit; //номер депозита
 
-    private String amount_deposit;
+    private double amount_deposit; //сумма депозита
 
-    private double interestRate;
+    private double interest_rate; //процентная ставка
 
-    private int expirationDate;
+    private int expiration_date; //срок действия
 
 }

@@ -7,6 +7,8 @@ public interface ClientService {
 
     public List<DepositAccount> getAllInformation();
 
+    public DepositAccount getDepositAccount(int id);
+
     public DepositAccount openAnDepositAccount(DepositAccount depositAccount);
 
     public DepositAccount wireTransfer(int id, int amount);

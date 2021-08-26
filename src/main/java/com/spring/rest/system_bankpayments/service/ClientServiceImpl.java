@@ -2,6 +2,7 @@ package com.spring.rest.system_bankpayments.service;
 
 import com.spring.rest.system_bankpayments.entity.account.DepositAccount;
 import com.spring.rest.system_bankpayments.repository.ClientRepository;
+import com.spring.rest.system_bankpayments.repository.DepositAccountRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,8 +14,17 @@ public class ClientServiceImpl implements ClientService {
     @Autowired
     private ClientRepository clientRepository;
 
+    @Autowired
+    private DepositAccountRepository depositAccountRepository;
+
     @Override
     public List<DepositAccount> getAllInformation() {
+
+        return depositAccountRepository.findAll();
+    }
+
+    @Override
+    public DepositAccount getDepositAccount(int id) {
         return null;
     }
 
