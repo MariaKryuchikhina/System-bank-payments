@@ -1,4 +1,6 @@
 package com.spring.rest.system_bankpayments.service;
 
-public interface CreditService {
+import com.spring.rest.system_bankpayments.entity.account.CreditAccount;
+
+public interface CreditService extends CrudService <CreditAccount, Long> {
 }
