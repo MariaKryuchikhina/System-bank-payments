@@ -1,7 +1,6 @@
 package com.spring.rest.system_bankpayments.entity.account;
 
 import lombok.*;
-
 import javax.persistence.*;
 
 @Entity
@@ -12,14 +11,18 @@ import javax.persistence.*;
 public class DepositAccount {
 
     @Id
-    private long id_deposit;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long idDeposit;
 
-    private String number_deposit; //номер депозита
+    private String numberDeposit; //номер депозита
 
-    private double amount_deposit; //сумма депозита
+    private double amountDeposit; //сумма депозита
 
-    private double interest_rate; //процентная ставка
+    private double interestRate; //процентная ставка
 
-    private int expiration_date; //срок действия
+    private int expirationDate; //срок действия
+
+    @Enumerated(EnumType.STRING)
+    private TypeEnum type;
 
 }

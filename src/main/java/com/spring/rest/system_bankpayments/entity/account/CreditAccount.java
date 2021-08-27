@@ -1,9 +1,7 @@
 package com.spring.rest.system_bankpayments.entity.account;
 
 import lombok.*;
-
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Setter
@@ -13,17 +11,21 @@ import javax.persistence.Id;
 public class CreditAccount {
 
     @Id
-    private long id_credit;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long idCredit;
 
-    private String number_credit; //номер кредита
+    private String numberCredit; //номер кредита
 
-    private double credit_limit; //кредитный лимит
+    private double creditLimit; //кредитный лимит
 
-    private double interest_rate; //процентная ставка
+    private double interestRate; //процентная ставка
 
-    private double current_debt; //текущая задолженность
+    private double currentDebt; //текущая задолженность
 
-    private double accrued_interest; //начисленные проценты
+    private double accruedInterest; //начисленные проценты
 
-    private int expiration_date; //срок действия
+    private int expirationDate; //срок действия
+
+    @Enumerated(EnumType.STRING)
+    private TypeEnum type;
 }

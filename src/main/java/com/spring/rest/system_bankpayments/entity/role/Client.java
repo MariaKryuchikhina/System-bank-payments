@@ -13,13 +13,14 @@ import javax.persistence.*;
 public class Client {
 
     @Id
-    private long id_client;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long idClient;
 
     private String firstName;
 
     private String lastName;
 
-    private String phone_number;
+    private String phoneNumber;
 
     private String email;
 
